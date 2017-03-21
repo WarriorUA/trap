@@ -1,0 +1,9 @@
+C:\Users\dinoz\Desktop\trap\trap\bin\Debug\trap.exe.config
+C:\Users\dinoz\Desktop\trap\trap\bin\Debug\trap.exe
+C:\Users\dinoz\Desktop\trap\trap\bin\Debug\trap.pdb
+C:\Users\dinoz\Desktop\trap\trap\obj\Debug\trap.csprojResolveAssemblyReference.cache
+C:\Users\dinoz\Desktop\trap\trap\obj\Debug\trap.Form1.resources
+C:\Users\dinoz\Desktop\trap\trap\obj\Debug\trap.Properties.Resources.resources
+C:\Users\dinoz\Desktop\trap\trap\obj\Debug\trap.csproj.GenerateResource.Cache
+C:\Users\dinoz\Desktop\trap\trap\obj\Debug\trap.exe
+C:\Users\dinoz\Desktop\trap\trap\obj\Debug\trap.pdb
