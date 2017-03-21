@@ -12,14 +12,10 @@ namespace trap
 {
     public partial class Form1 : Form
     {
-        Point[] points = new Point[4];
+        Trap trap=new Trap1();
         public Form1()
         {
             InitializeComponent();
-            points[0] = new Point(10, 50);
-            points[1] = new Point(10, 100);
-            points[2] = new Point(100, 150);
-            points[3] = new Point(100, 0);
         }
 
 
@@ -27,7 +23,7 @@ namespace trap
         {
             Graphics g = e.Graphics;
             g.Clear(Color.White);
-            g.DrawPolygon(new Pen(Color.Black, 2), points);
+            g.DrawPolygon(new Pen(Color.Black, 2), trap.points);
 
         }
         private void pictureBoxClear_Paint(object sender, PaintEventArgs e)
@@ -40,7 +36,7 @@ namespace trap
         {
             Graphics g = e.Graphics;
             g.Clear(Color.White);
-            g.FillPolygon(new SolidBrush(Color.Aqua), points);
+            g.FillPolygon(new SolidBrush(Color.Aqua), trap.points);
         }
 
 
@@ -64,12 +60,7 @@ namespace trap
 
         private void buttonTurn_Click(object sender, EventArgs e)
         {
-            for(int i=0;i<4;++i)
-            {
-                int x = points[i].X;
-                points[i].X = points[i].Y;
-                points[i].Y =  x;
-            }
+          trap.Turn();
         }
 
         private void buttonFill_Click(object sender, EventArgs e)
@@ -79,6 +70,34 @@ namespace trap
             Rectangle rec = new Rectangle();
             PaintEventArgs es = new PaintEventArgs(g, rec);
             pictureBoxFill_Paint(pictureBox1, es);
+        }
+    }
+
+   abstract class Trap
+    {
+        public Point[] points = new Point[4];
+
+        public Trap()
+        {
+            points[0] = new Point(10, 50);
+            points[1] = new Point(10, 100);
+            points[2] = new Point(100, 150);
+            points[3] = new Point(100, 0);
+        }
+
+        public abstract void Turn();
+    }
+
+    class Trap1:Trap
+    {
+        public override void Turn()
+        {
+            for (int i = 0; i < 4; ++i)
+            {
+                int x = points[i].X;
+                points[i].X = points[i].Y;
+                points[i].Y = x;
+            }
         }
     }
 }
