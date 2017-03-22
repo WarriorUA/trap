@@ -12,7 +12,7 @@ namespace trap
 {
     public partial class Form1 : Form
     {
-        Trap trap=new Trap1();
+        Versh trap=new Trap1();
         public Form1()
         {
             InitializeComponent();
@@ -73,11 +73,11 @@ namespace trap
         }
     }
 
-   abstract class Trap
+   abstract class Versh
     {
         public Point[] points = new Point[4];
 
-        public Trap()
+        public Versh()
         {
             points[0] = new Point(10, 50);
             points[1] = new Point(10, 100);
@@ -88,7 +88,7 @@ namespace trap
         public abstract void Turn();
     }
 
-    class Trap1:Trap
+    class Trap1:Versh
     {
         public override void Turn()
         {
